@@ -1,10 +1,10 @@
 /**
- * App functional component
- * @returns App functional component
+ * A functional component
+ * @returns A functional component
  */
-const App = ({ initialButtonText }) => {
+const App = ({ initialButtonText, initialClass }) => {
   const [buttonText, setButtonText] = React.useState(initialButtonText);
-  const [buttonClassName, setButtonClassName] = React.useState('');
+  const [buttonClassName, setButtonClassName] = React.useState(initialClass);
 
   const onButtonClick = () => {
     setButtonText('Hello from React');
@@ -22,4 +22,4 @@ const App = ({ initialButtonText }) => {
 
 const container = document.getElementById('app');
 const root = ReactDOM.createRoot(container);
-root.render(<App initialButtonText="Click me" />);
+root.render(<App initialButtonText="Click me" initialClass="" />);
