@@ -1,8 +1,5 @@
 import { useState } from 'react';
-
-function generateRandomNum() {
-  return Math.floor(Math.random() * 6 + 1);
-}
+import generateRandomNum from '../utils/generateRandomNum';
 
 function RandomNumber() {
   const [number, setNumber] = useState(generateRandomNum());
