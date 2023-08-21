@@ -1,5 +1,5 @@
-function Button({ setCount }) {
-  return <button onClick={setCount}>Click me!</button>;
+function Button({ setCount, name }) {
+  return <button onClick={setCount}>{name}</button>;
 }
 
 export default Button;
