@@ -1,6 +1,6 @@
 function Person({ firstName, lastName, email, img }) {
   return (
-    <div>
+    <div className="card">
       <img src={img} />
       <h3>
         {firstName} {lastName}
