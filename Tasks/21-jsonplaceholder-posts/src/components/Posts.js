@@ -7,7 +7,8 @@ function Posts() {
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => response.json())
-      .then((apiPosts) => setPosts(apiPosts));
+      .then((apiPosts) => setPosts(apiPosts))
+      .catch((error) => console.log(error.message));
   }, []);
 
   return (
