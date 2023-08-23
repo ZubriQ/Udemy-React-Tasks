@@ -1,10 +1,20 @@
+import { useEffect, useState } from 'react';
 import Post from './Post';
 
 function Posts() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((apiPosts) => setPosts(apiPosts));
+  }, []);
+
   return (
     <div>
-      <Post />
-      <Post />
+      {posts.map(() => {
+        return <Post />;
+      })}
     </div>
   );
 }
