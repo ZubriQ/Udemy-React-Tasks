@@ -19,7 +19,7 @@ function Posts() {
   }
 
   return (
-    <div>
+    <>
       <h1>Posts</h1>
       <hr />
 
@@ -28,7 +28,7 @@ function Posts() {
       ) : (
         posts.map((post) => <Post key={post.id} {...post} />)
       )}
-    </div>
+    </>
   );
 }
 
