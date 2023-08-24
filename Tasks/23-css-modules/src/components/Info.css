@@ -1,0 +1,9 @@
+/* this css effects globally */
+h1 {
+  color: greenyellow;
+}
+
+.my-button {
+  padding: 15px;
+  background-color: yellowgreen;
+}
