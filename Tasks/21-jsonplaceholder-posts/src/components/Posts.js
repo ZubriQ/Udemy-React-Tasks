@@ -14,19 +14,20 @@ function Posts() {
       .finally(() => setIsLoading(false));
   }, []);
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-
   if (error) {
     return <h1>Error: {error}</h1>;
   }
 
   return (
     <div>
-      {posts.map((post) => (
-        <Post key={post.id} {...post} />
-      ))}
+      <h1>Posts</h1>
+      <hr />
+
+      {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
+        posts.map((post) => <Post key={post.id} {...post} />)
+      )}
     </div>
   );
 }
