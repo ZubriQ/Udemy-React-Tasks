@@ -9,12 +9,41 @@ function Posts() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((apiPosts) => setPosts(apiPosts))
-      .catch((error) => setError(error.message))
-      .finally(() => setIsLoading(false));
+    const fetchData = async () => {
+      try {
+        const res = await fetch(API_URL);
+        const posts = await res.json();
+        setPosts(posts);
+      } catch (error) {
+        setError(error.message);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
   }, []);
+
+  // IIFE option:
+  // useEffect(() => {
+  //   (async function () {
+  //     try {
+  //       const res = await fetch(API_URL);
+  //       const posts = await res.json();
+  //       setPosts(posts);
+  //     } catch (error) {
+  //       setError(error.message);
+  //     }
+  //     setIsLoading(false);
+  //   })();
+  // }, []);
+
+  // Old option:
+  // useEffect(() => {
+  //   fetch(API_URL)
+  //     .then((response) => response.json())
+  //     .then((apiPosts) => setPosts(apiPosts))
+  //     .catch((error) => setError(error.message))
+  //     .finally(() => setIsLoading(false));
+  // }, []);
 
   if (error) {
     return <h1>Error: {error}</h1>;
