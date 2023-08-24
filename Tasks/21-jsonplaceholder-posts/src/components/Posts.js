@@ -13,10 +13,9 @@ function Posts() {
 
   return (
     <div>
-      {posts.map((post) => {
-        const { userId, id, title, body } = post;
-        return <Post userId={userId} id={id} title={title} body={body} />;
-      })}
+      {posts.map((post) => (
+        <Post {...post} />
+      ))}
     </div>
   );
 }
