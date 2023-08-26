@@ -6,6 +6,9 @@ function TodoForm({ addTodo }) {
   const [text, setText] = useState('');
   const onSubmitHandler = (event) => {
     event.preventDefault();
+    if (!text) {
+      return;
+    }
     addTodo(text);
     setText('');
   };
