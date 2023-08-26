@@ -5,8 +5,13 @@ import TodoList from './components/Todos/TodoList';
 
 function App() {
   const [todos, setTodos] = useState([]);
+
   const addTodoHandler = (text) => {
     setTodos([...todos, text]);
+  };
+
+  const deleteTodoHandler = (index) => {
+    setTodos(todos.filter((_, todoIndex) => todoIndex !== index));
   };
 
   return (
@@ -16,7 +21,7 @@ function App() {
         skills
       </h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
     </div>
   );
 }
