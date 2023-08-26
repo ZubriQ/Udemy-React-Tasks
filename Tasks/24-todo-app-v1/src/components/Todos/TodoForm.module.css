@@ -13,6 +13,7 @@
   height: 50px;
   padding-left: 15px;
   color: #37425b;
+  background-color: #d7d9de;
 }
 .todoInput:focus {
   outline: none;

@@ -1,0 +1,16 @@
+.todoCard {
+  background-color: #d7d9de;
+  color: #37425b;
+  font-weight: 600;
+  font-size: 20px;
+  width: 350px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.todoIcon {
+  margin-right: 15px;
+}
