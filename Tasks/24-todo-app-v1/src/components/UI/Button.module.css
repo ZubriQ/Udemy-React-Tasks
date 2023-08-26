@@ -1,0 +1,16 @@
+.todoButton {
+  background-color: #a4c9d4;
+  font-weight: 600;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 50px;
+  color: #37425b;
+  margin: 15px;
+}
+.todoButton:active {
+  background-color: #80979e;
+}
