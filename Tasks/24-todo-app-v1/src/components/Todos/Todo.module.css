@@ -13,5 +13,7 @@
 }
 
 .todoIcon {
-  margin-right: 15px;
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: rgb(196, 145, 50);
 }
