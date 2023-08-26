@@ -1,15 +1,7 @@
-import { useState } from 'react';
 import styles from './TodoList.module.css';
 import Todo from './Todo';
 
-function TodoList() {
-  const [todos, setTodos] = useState([
-    'Initial todo',
-    'The second todo',
-    'Learn React',
-    'Learn CSS',
-  ]);
-
+function TodoList({ todos }) {
   return (
     <div className={styles.todoList}>
       {todos.map((todo, index) => {
