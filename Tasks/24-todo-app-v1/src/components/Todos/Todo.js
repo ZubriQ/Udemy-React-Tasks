@@ -1,6 +1,6 @@
 import styles from './Todo.module.css';
 
-function Todo() {
+function Todo({ text }) {
   return (
     <div className={styles.todoCard}>
       <img
@@ -8,7 +8,7 @@ function Todo() {
         alt="icon"
         className={styles.todoIcon}
       />
-      <p>This is a todo</p>
+      <p>{text}</p>
     </div>
   );
 }
