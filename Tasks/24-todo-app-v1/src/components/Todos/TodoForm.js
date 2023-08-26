@@ -3,14 +3,15 @@ import Button from '../UI/Button';
 
 function TodoForm({ addTodo, setNewTodoInput }) {
   return (
-    <div className={styles.todoForm}>
+    <form className={styles.todoForm}>
       <input
         className={styles.todoInput}
         placeholder="Enter a new todo"
-        onChange={(e) => setNewTodoInput(e.target.value)}
+        // onChange={(e) => setNewTodoInput(e.target.value)}
       />
-      <Button buttonName="Add" addTodo={addTodo} />
-    </div>
+      <button type="submit">Add</button>
+      {/*<Button buttonName="Add" addTodo={addTodo} />*/}
+    </form>
   );
 }
 

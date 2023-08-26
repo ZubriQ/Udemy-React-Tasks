@@ -4,12 +4,7 @@ import TodoForm from './components/Todos/TodoForm';
 import TodoList from './components/Todos/TodoList';
 
 function App() {
-  const [todos, setTodos] = useState([
-    'Initial todo',
-    'The second todo',
-    'Learn React',
-    'Learn CSS',
-  ]);
+  const [todos, setTodos] = useState(['one', 'two']);
   function addTodo() {
     setTodos((prevTodos) => [...prevTodos, 'Added new todo']);
   }
@@ -23,7 +18,7 @@ function App() {
         skills
       </h1>
       <TodoForm addTodo={addTodo} setNewTodoInput={setNewTodoInput} />
-      <TodoList todos={todos}></TodoList>
+      <TodoList todos={todos} />
     </div>
   );
 }

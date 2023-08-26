@@ -6,4 +6,10 @@
 body {
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #37425b;
+  color: #d7d9de;
+}
+
+h1 {
+  margin: 15px;
 }
