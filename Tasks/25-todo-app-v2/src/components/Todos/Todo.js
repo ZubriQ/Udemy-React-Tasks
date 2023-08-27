@@ -4,7 +4,11 @@ import styles from './Todo.module.css';
 
 function Todo({ todo, deleteTodo, toggleTodo }) {
   return (
-    <div className={styles.todoCard}>
+    <div
+      className={`${styles.todoCard} ${
+        todo.isCompleted ? styles.completedTodo : ''
+      }`}
+    >
       <FaThumbtack className={styles.todoIcon} />
       <h4 className={styles.todoText}>{todo.text}</h4>
       <FaTrashAlt
