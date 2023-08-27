@@ -1,11 +1,11 @@
 import { FaIoxhost } from 'react-icons/fa';
 import styles from './Todo.module.css';
 
-function Todo({ todo, index, deleteTodo }) {
+function Todo({ todo, deleteTodo }) {
   return (
-    <div className={styles.todoCard} onDoubleClick={() => deleteTodo(index)}>
+    <div className={styles.todoCard} onDoubleClick={() => deleteTodo(todo.id)}>
       <FaIoxhost className={styles.todoIcon} />
-      <p>{todo}</p>
+      <p>{todo.text}</p>
     </div>
   );
 }
