@@ -31,6 +31,14 @@ function App() {
     );
   };
 
+  const resetTodosHandler = () => {
+    setTodos([]);
+  };
+
+  const deleteCompletedTodosHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
   return (
     <div className="App">
       <h1>
@@ -38,7 +46,10 @@ function App() {
         skills
       </h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodosActions />
+      <TodosActions
+        resetTodos={resetTodosHandler}
+        deleteCompletedTodos={deleteCompletedTodosHandler}
+      />
       <TodoList
         todos={todos}
         deleteTodo={deleteTodoHandler}
