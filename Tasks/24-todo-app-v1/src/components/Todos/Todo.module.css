@@ -15,5 +15,6 @@
 .todoIcon {
   margin-right: 10px;
   font-size: 1.8rem;
+  min-width: 30px;
   color: rgb(196, 145, 50);
 }
