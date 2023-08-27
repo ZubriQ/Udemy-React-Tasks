@@ -17,3 +17,8 @@
 .button:active {
   background-color: #95b5be;
 }
+.button:disabled {
+  color: #878e9d;
+  background-color: #a4c9d4;
+  cursor: default;
+}

@@ -7,6 +7,7 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
 
   const addTodoHandler = (text) => {
     const newTodo = {
@@ -46,10 +47,13 @@ function App() {
         skills
       </h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodosActions
-        resetTodos={resetTodosHandler}
-        deleteCompletedTodos={deleteCompletedTodosHandler}
-      />
+      {!!todos.length && (
+        <TodosActions
+          completedTodosExist={!!completedTodosCount}
+          resetTodos={resetTodosHandler}
+          deleteCompletedTodos={deleteCompletedTodosHandler}
+        />
+      )}
       <TodoList
         todos={todos}
         deleteTodo={deleteTodoHandler}
