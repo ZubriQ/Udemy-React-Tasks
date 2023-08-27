@@ -11,6 +11,8 @@
   border: 0;
   margin: 15px;
   height: 50px;
+  width: 100%;
+  max-width: 270px;
   padding-left: 15px;
   color: #37425b;
   background-color: #d7d9de;
