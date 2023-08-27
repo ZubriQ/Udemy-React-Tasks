@@ -1,9 +1,14 @@
 import styles from './Button.module.css';
 
-function Button(props) {
+function Button({ onClick, children, title, disabled = false }) {
   return (
-    <button onClick={props.addTodo} className={styles.todoButton}>
-      {[props.buttonName]}
+    <button
+      onClick={onClick}
+      title={title}
+      disabled={disabled}
+      className={styles.button}
+    >
+      {children}
     </button>
   );
 }

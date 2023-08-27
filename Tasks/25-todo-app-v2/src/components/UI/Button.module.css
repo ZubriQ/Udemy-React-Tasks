@@ -1,4 +1,4 @@
-.todoButton {
+.button {
   background-color: #a4c9d4;
   font-weight: 600;
   padding: 15px;
@@ -6,11 +6,14 @@
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.4rem;
   height: 50px;
   color: #37425b;
   margin: 15px;
 }
-.todoButton:active {
-  background-color: #80979e;
+.button:hover {
+  background-color: #a6d0dd;
+}
+.button:active {
+  background-color: #95b5be;
 }
