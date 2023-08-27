@@ -9,6 +9,7 @@
   border-radius: 2px;
   display: flex;
   flex-direction: row;
+  border: 2px solid transparent;
 }
 
 .todoText {
