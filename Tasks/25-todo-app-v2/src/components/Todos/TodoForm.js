@@ -22,7 +22,9 @@ function TodoForm({ addTodo }) {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <Button type="submit" title="Submit">
+          Add
+        </Button>
       </form>
     </div>
   );
