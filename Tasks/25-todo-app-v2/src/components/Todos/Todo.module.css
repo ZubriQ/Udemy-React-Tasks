@@ -3,18 +3,66 @@
   color: #37425b;
   font-weight: 600;
   font-size: 20px;
-  width: 280px;
+  width: 290px;
   padding: 15px;
   margin: 15px;
   border-radius: 2px;
   display: flex;
   flex-direction: row;
-  cursor: pointer;
+}
+
+.todoText {
+  width: 100%;
+  text-align: left;
+}
+
+.completedTodo {
+  background-color: unset;
+  border-color: #878e9d;
+  color: #878e9d;
+  border: 2px solid #878e9d;
+}
+
+.todoCard.completedTodo .todoIcon,
+.todoCard.completedTodo .checkIcon,
+.todoCard.completedTodo .deleteIcon {
+  color: #878e9d;
+}
+
+.todoIcon,
+.deleteIcon,
+.checkIcon {
+  font-size: 1.6rem;
+  min-width: 24px;
 }
 
 .todoIcon {
-  margin-right: 10px;
-  font-size: 1.8rem;
-  min-width: 30px;
-  color: rgb(196, 145, 50);
+  margin-right: 15px;
+  color: rgb(76, 171, 184);
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.15));
+}
+
+.deleteIcon {
+  margin-right: 15px;
+}
+
+.checkIcon,
+.deleteIcon {
+  cursor: pointer;
+  color: #afb3bd;
+  transition: transform 0.3s;
+}
+
+.checkIcon:hover,
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.checkIcon:hover {
+  color: green;
+}
+
+.deleteIcon:hover {
+  color: red;
 }
