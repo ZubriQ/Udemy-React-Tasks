@@ -13,6 +13,7 @@ const Menu = () => {
       >
         Home
       </NavLink>
+      <NavLink to="courses">Courses</NavLink>
       <NavLink
         to="about"
         className={({ isActive }) => (isActive ? 'activeLink' : 'link')}

@@ -3,11 +3,10 @@
 }
 
 /* Used by default with NavLink */
-/* 
 .active {
   color: #95d779;
   text-decoration: none;
-} */
+}
 
 .activeLink {
   color: #95d779;

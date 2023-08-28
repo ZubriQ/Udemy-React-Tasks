@@ -3,8 +3,10 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import About from './components/About';
 import Contacts from './components/Contacts';
+import Courses from './components/Courses';
 import MainLayout from './layouts/MainLayout';
 import './App.css';
+import SingleCourse from './components/SingleCourse';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="courses/:slug" element={<SingleCourse />} />
           </Route>
         </Routes>
       </div>
