@@ -6,7 +6,10 @@ const Menu = () => {
       <NavLink
         to="."
         end
-        className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
+        // Option 3 that shows how we can update css:
+        style={({ isActive }) =>
+          isActive ? { color: '#95d779', textDecoration: 'none' } : {}
+        }
       >
         Home
       </NavLink>
