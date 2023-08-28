@@ -16,3 +16,8 @@ button {
   font-weight: 600;
   cursor: pointer;
 }
+
+a {
+  color: darkturquoise;
+  font-size: 26px;
+}
