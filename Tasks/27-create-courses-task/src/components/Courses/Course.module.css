@@ -1,0 +1,11 @@
+.courseContainer {
+  background-color: #0d424e;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.courseContainer a {
+  color: #f9f871;
+}
