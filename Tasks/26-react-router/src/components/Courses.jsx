@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import queryString from 'query-string';
 import courses from '../data/courses';
+import Select from 'react-select';
 
 const SORT_KEYS = ['title', 'slug', 'id'];
 
@@ -24,6 +25,13 @@ const Courses = () => {
     sortCourses(courses, sortKey)
   );
 
+  const handleSortChange = (selectedOption) => {
+    setSortKey(selectedOption.value);
+    navigate(`?sort=${selectedOption.value}`);
+  };
+
+  const sortOptions = SORT_KEYS.map((key) => ({ label: key, value: key }));
+
   useEffect(() => {
     if (!SORT_KEYS.includes(sortKey)) {
       navigate('.');
@@ -39,6 +47,11 @@ const Courses = () => {
           ? `Courses sorted by ${sortKey}`
           : 'Courses'}
       </h1>
+      <Select
+        value={sortOptions.find((option) => option.value === sortKey)}
+        onChange={handleSortChange}
+        options={sortOptions}
+      />
       {sortedCourses.map((course) => (
         <div key={course.id}>
           <Link to={course.slug} className="courseLink">
