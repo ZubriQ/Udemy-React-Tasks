@@ -1,8 +1,9 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import queryString from 'query-string';
-import courses from '../data/courses';
 import Select from 'react-select';
+import courses from '../data/courses';
+import styles from './Courses.module.css';
 
 const SORT_KEYS = ['title', 'slug', 'id'];
 
@@ -40,6 +41,10 @@ const Courses = () => {
     }
   }, [sortKey, navigate]);
 
+  useEffect(() => {
+    setSortedCourses(sortCourses(courses, sortKey));
+  }, [sortKey]);
+
   return (
     <>
       <h1>
@@ -47,11 +52,6 @@ const Courses = () => {
           ? `Courses sorted by ${sortKey}`
           : 'Courses'}
       </h1>
-      <Select
-        value={sortOptions.find((option) => option.value === sortKey)}
-        onChange={handleSortChange}
-        options={sortOptions}
-      />
       {sortedCourses.map((course) => (
         <div key={course.id}>
           <Link to={course.slug} className="courseLink">
@@ -59,6 +59,42 @@ const Courses = () => {
           </Link>
         </div>
       ))}
+
+      <Select
+        className={styles.dropdown}
+        value={sortOptions.find((option) => option.value === sortKey)}
+        onChange={handleSortChange}
+        options={sortOptions}
+        styles={{
+          control: (baseStyles, state) => ({
+            ...baseStyles,
+            borderColor: state.isFocused ? '#95d779' : '#00c6af',
+            backgroundColor: '#005663',
+            color: '#00c6af',
+          }),
+          menuList: (baseStyles) => ({
+            ...baseStyles,
+            backgroundColor: '#0D424E',
+          }),
+          option: (baseStyles, state) => ({
+            ...baseStyles,
+            color: state.isFocused ? '#95d779' : '#00c6af',
+            backgroundColor: state.isSelected
+              ? '#133744'
+              : state.isFocused
+              ? '#0D424E'
+              : '#064C59',
+          }),
+          placeholder: (baseStyles) => ({
+            ...baseStyles,
+            color: '#00c6af',
+          }),
+          singleValue: (baseStyles) => ({
+            ...baseStyles,
+            color: '#95d779',
+          }),
+        }}
+      />
     </>
   );
 };
