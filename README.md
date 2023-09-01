@@ -20,5 +20,16 @@ The course was designed in such a way that it was necessary to create projects a
 ## 📝 `Todo app` example
 ![image](https://i.imgur.com/nstR7M1.png)
 
+## :wrench: Useful extensions
+- Auto Rename tag
+- Code Runner
+- Code Spell Checker
+- ES7+ React/Redux/React-Native snippets
+- Live Server
+- Markdown Preview Enhanced
+- Prettier - Code formatter
+- Quokka.js
+- vscode-icons
+
 ## 🔗 Course Link
 The course can be found [here](https://www.udemy.com/course/react-ru/).
