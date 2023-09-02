@@ -20,7 +20,7 @@ The course was designed in such a way that it was necessary to create projects a
 ## 📝 `Todo app` example
 ![image](https://i.imgur.com/nstR7M1.png)
 
-## :wrench: Useful extensions
+## :wrench: VS Code Extensions
 - Auto Rename tag
 - Code Runner
 - Code Spell Checker
